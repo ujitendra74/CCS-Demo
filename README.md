@@ -32,6 +32,8 @@
 
 - Inspect the steps within the workflow execution to see what happened.
 
+## Bonus
+
 - Extend the workflow with logic based on the test results.
 
 - Vibe code another feature of your choice and let it go through the workflow.
