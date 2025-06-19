@@ -36,6 +36,8 @@
 - Edit the n8n pipeline with all your own credentials to connect with GitHub, Airtop and OpenAI.
   - All steps which need it should show an error icon.
   - For all GitHub nodes change the repository owner to yourself.
+ 
+- Change the workflow from "Open browser" to your workflow
 
 - Activate your workflow within n8n.
   - Switch the toggle at the top right to "Active"
