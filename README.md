@@ -27,14 +27,15 @@
 - Set your preview environments within Vercel to have no authorization.
   - Within Vercel click on "Settings"
   - Go to "Deployment Protection"
-  - Switch off protection for the demo repository 
+  - Switch off protection for the demo repository.
 
 - [Import the workflow from the GitHub repository (within n8n directory) in n8n.](https://docs.n8n.io/courses/level-one/chapter-6/)
-  - Create a new workflow
-  - Use the "Import from File..." option
+  - Create a new workflow.
+  - Use the "Import from File..." option.
 
 - Edit the n8n pipeline with all your own credentials to connect with GitHub, Airtop and OpenAI.
-  - All steps which need it should show an error icon
+  - All steps which need it should show an error icon.
+  - For all GitHub nodes change the repository owner to yourself.
 
 - Activate your workflow within n8n.
   - Switch the toggle at the top right to "Active"
@@ -45,7 +46,7 @@
 
 - Create a PR to see if the workflow get executed correctly.
   - If you like to skip the above 2 steps you can create a PR for the `line-items-combined` branch.
-  - <u>Make sure to create a pull request to your fork, not the original repository.</u>
+  - <u>Make sure to create a pull request to your fork, not the original repository. (change base repository)</u>
 
 - Inspect the steps within the workflow execution to see what happened.
 
