@@ -38,6 +38,7 @@
 - Vibe code a new feature, make sure to have a related GitHub issue.
 
 - Create a PR to see if the workflow get executed correctly.
+  - If you like to skip the above 2 steps you can create a PR for the `line-items-combined` branch.
 
 - Inspect the steps within the workflow execution to see what happened.
 
