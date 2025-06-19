@@ -45,6 +45,7 @@
 
 - Create a PR to see if the workflow get executed correctly.
   - If you like to skip the above 2 steps you can create a PR for the `line-items-combined` branch.
+  - Make sure to create a pull request to your fork, not the original repository.
 
 - Inspect the steps within the workflow execution to see what happened.
 
