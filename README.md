@@ -11,13 +11,17 @@
   - [Airtop](https://www.airtop.ai/)
   - [Vercel](https://vercel.com/)
 
-- Fork + clone repository:
+- Fork repository & Add SCRUM issue:
   - https://github.com/tlolkema/ai-demo-webshop
+  - Untick "main branch only"
+  - Enable the "Issues" tab for forked repositories (Setting > General > Features > Issues)
+  - Write your own scrum issue or copy an example from the repository
 
 - [Connect your Vercel account to the GitHub repository](https://vercel.com/docs/git#deploying-a-git-repository)
   - Within Vercel, top right click "Add New..."
+  - Select "Project"
   - Select the forked repository
-  - import
+  - Import
   - Deploy
 
 - Set your preview environments within Vercel to have no authorization.
