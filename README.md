@@ -45,14 +45,22 @@
 
 - Create a PR to see if the workflow get executed correctly.
   - If you like to skip the above 2 steps you can create a PR for the `line-items-combined` branch.
-  - Make sure to create a pull request to your fork, not the original repository.
+  - <u>Make sure to create a pull request to your fork, not the original repository.</u>
 
 - Inspect the steps within the workflow execution to see what happened.
+
+- Copy the payload of your executed run and use it as mock
+  - Run the workflow with a manual trigger using the pull request event mock
 
 ## Bonus
 
 - Extend the workflow with logic based on the test results.
+  - If all tests pass > Approve pull request
+  - If any test failed > Request changes on the pull request
 
 - Vibe code another feature of your choice and let it go through the workflow.
+  - Create a scrum issue of you new feature
+  - Vibe code your new feature
+  - Create a pull request and see how the pipeline is used
 
 - Whatever you feel like extending the pipeline or agentic capabilities. 😃
