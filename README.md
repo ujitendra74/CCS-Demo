@@ -11,7 +11,7 @@
   - [Airtop](https://www.airtop.ai/)
   - [Vercel](https://vercel.com/)
 
-- Clone repository:
+- Fork + clone repository:
   - https://github.com/tlolkema/ai-demo-webshop
 
 - [Connect your Vercel account to the GitHub repository](https://vercel.com/docs/git#deploying-a-git-repository)
