@@ -6,23 +6,32 @@
 # Setup  
 
 - Create accounts for:
-  -  GitHub
-  - n8n
-  - Airtop.ai
-  - Vercel
+  - [GitHub](https://github.com)
+  - [n8n](https://n8n.io/)
+  - [Airtop](https://www.airtop.ai/)
+  - [Vercel](https://vercel.com/)
 
 - Clone repository:
   - https://github.com/tlolkema/ai-demo-webshop
 
-- Connect your Vercel account to the GitHub repository.
+- [Connect your Vercel account to the GitHub repository](https://vercel.com/docs/git#deploying-a-git-repository)
+  - Within Vercel, top right click "Add New..."
+  - Select the forked repository
+  - import
+  - Deploy
 
 - Set your preview environments within Vercel to have no authorization.
+  - Within Vercel click on "Settings"
+  - Go to "Deployment Protection"
+  - Switch off protection for the demo repository 
 
-- Import the pipeline from the GitHub repository (within n8n directory) in n8n.
+- [Import the workflow from the GitHub repository (within n8n directory) in n8n.](https://docs.n8n.io/courses/level-one/chapter-6/)
+  - Use the "Import from File..." option
 
 - Edit the n8n pipeline with all your own credentials to connect with GitHub, Airtop and OpenAI.
 
-- Enable your workflow within n8n.  
+- Activate your workflow within n8n.
+  - Switch the toggle at the top right to "Active"
 
 # Workshop
 
