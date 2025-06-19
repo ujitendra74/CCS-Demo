@@ -30,9 +30,11 @@
   - Switch off protection for the demo repository 
 
 - [Import the workflow from the GitHub repository (within n8n directory) in n8n.](https://docs.n8n.io/courses/level-one/chapter-6/)
+  - Create a new workflow
   - Use the "Import from File..." option
 
 - Edit the n8n pipeline with all your own credentials to connect with GitHub, Airtop and OpenAI.
+  - All steps which need it should show an error icon
 
 - Activate your workflow within n8n.
   - Switch the toggle at the top right to "Active"
