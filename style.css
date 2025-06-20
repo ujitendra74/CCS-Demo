@@ -520,10 +520,119 @@ input[type="text"]:focus {
 }
 
 .nav-links a:hover {
-    background-color: #f0f0f0;
+    text-decoration: underline;
+    color: white;
 }
 
 .nav-links a.active {
-    background-color: #4CAF50;
-    color: white;
+    font-weight: 700;
+    color: #0056b3;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  .header-center {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .nav-links {
+    order: 2; /* Change order to show links after basket */
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .basket-link {
+    order: 1; /* Show basket before nav links */
+  }
+
+  .logo-img {
+    height: 120px;
+    margin-right: 0;
+  }
+
+  .basket-img {
+    height: 120px;
+  }
+
+  .basket-text,
+  .products-text {
+    display: none; /* Hide text on small screens */
+  }
+
+  .products-title {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .emoji-list {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .emoji-box {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+  }
+
+  .content-box {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  .basket-indicator {
+    bottom: 1rem;
+    right: 1rem;
+    min-width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1rem;
+  }
+
+  .bundles-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .bundle-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .quiz-container {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  .quiz-promo h2,
+  .bundles-promo h2 {
+    font-size: 1.5rem;
+  }
+
+  .quiz-promo p,
+  .bundles-promo p {
+    font-size: 1rem;
+  }
 }
