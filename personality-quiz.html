@@ -3,32 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Personality Quiz - Discover Your Fruity Self!</title>
+    <title>Fruit Personality Quiz - Change the World with Your Choices!</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Discover your fruit personality and make a positive impact on the world! Take our quiz to learn how your choices affect the environment and get personalized recommendations.">
+    <meta property="og:title" content="Fruit Personality Quiz - Change the World!">
+    <meta property="og:description" content="Discover your fruit personality and make a positive impact on the world!">
+    <meta property="og:image" content="img/fruit-shop-logo.webp">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">
-                <img src="img/fruit-shop-logo.webp" alt="Fruit Shop Logo" class="logo">
+            <a href="index.html" class="logo">
+                <img src="img/fruit-shop-logo.webp" alt="Fruit Shop Logo" width="50" height="50">
+                Fruit Shop
             </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="bundles.html">Bundles</a>
-                <a href="personality-quiz.html" class="active">Personality Quiz</a>
+                <a href="basket.html">
+                    <img src="img/basket-icon.png" alt="Basket" width="20" height="20">
+                    Basket
+                </a>
             </div>
-            <a href="basket.html" class="basket-link">
-                <img src="img/basket-icon.png" alt="Shopping Basket" class="basket-icon">
-                <span class="basket-count">0</span>
-            </a>
         </nav>
     </header>
 
     <main class="quiz-container">
-        <section id="quiz-start" class="quiz-section">
-            <h1>Discover Your Fruit Personality!</h1>
-            <p class="quiz-intro">Ever wondered which fruit matches your personality? Take our fun quiz to find out and get personalized fruit bundle recommendations!</p>
-            <button onclick="startQuiz()" class="start-button">Start Quiz</button>
+        <section id="quiz-intro" class="quiz-section">
+            <h1>🌍 Discover Your Fruit Personality & Change the World! 🌱</h1>
+            <div class="intro-content">
+                <p class="intro-text">
+                    More than just a personality quiz - discover how your fruit preferences connect to environmental impact, health benefits, and global sustainability. Join our growing community of conscious consumers making a difference, one fruit at a time!
+                </p>
+                <div class="impact-preview">
+                    <div class="impact-stat">
+                        <span class="number">🌳</span>
+                        <span class="label">Environmental Impact</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="number">💪</span>
+                        <span class="label">Health Insights</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="number">🌏</span>
+                        <span class="label">Global Community</span>
+                    </div>
+                </div>
+            </div>
+            <div id="quiz-start">
+                <button onclick="startQuiz()" class="start-button">Start Your Journey</button>
+            </div>
         </section>
 
         <section id="quiz-questions" class="quiz-section" style="display: none;">
@@ -41,10 +65,26 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Fruit Shop. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Our Mission</h3>
+                <p>Connecting people with sustainable fruit choices to create a better world, one quiz at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Join the Movement</h3>
+                <p>Share your results and inspire others to make conscious choices!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fruit Shop. Making the world better through sustainable fruit choices.</p>
+        </div>
     </footer>
 
-    <script src="shop.js"></script>
     <script src="quiz.js"></script>
 </body>
 </html> 
