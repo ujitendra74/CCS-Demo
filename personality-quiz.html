@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Personality Quiz - Discover Your Fruity Self!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="img/fruit-shop-logo.webp" alt="Fruit Shop Logo" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="bundles.html">Bundles</a>
+                <a href="personality-quiz.html" class="active">Personality Quiz</a>
+            </div>
+            <a href="basket.html" class="basket-link">
+                <img src="img/basket-icon.png" alt="Shopping Basket" class="basket-icon">
+                <span class="basket-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="quiz-container">
+        <section id="quiz-start" class="quiz-section">
+            <h1>Discover Your Fruit Personality!</h1>
+            <p class="quiz-intro">Ever wondered which fruit matches your personality? Take our fun quiz to find out and get personalized fruit bundle recommendations!</p>
+            <button onclick="startQuiz()" class="start-button">Start Quiz</button>
+        </section>
+
+        <section id="quiz-questions" class="quiz-section" style="display: none;">
+            <!-- Questions will be dynamically inserted here -->
+        </section>
+
+        <section id="quiz-result" class="quiz-section" style="display: none;">
+            <!-- Results will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fruit Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="shop.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html> 
