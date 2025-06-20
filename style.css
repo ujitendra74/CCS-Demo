@@ -538,3 +538,256 @@ input[type="text"]:focus {
 .recommendations a:hover {
     text-decoration: underline;
 }
+
+.bundles-promo p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0 0;
+}
+.bundles-promo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+.bundle-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.bundle-link h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.bundle-link p {
+  margin: 0.5rem 0 0;
+  color: #555;
+}
+.quiz-promo {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.quiz-promo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+.quiz-promo .quiz-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.quiz-promo h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+.quiz-promo p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0.5rem 0 0;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #0077ff;
+}
+.nav-links a.active {
+  font-weight: 700;
+  color: #0056b3;
+}
+.nav-links .quiz-link {
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  color: #7a4c00;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+}
+.nav-links .quiz-link:hover {
+  background: linear-gradient(90deg, #ffa751 0%, #ffe259 100%);
+  color: #a85c00;
+}
+
+/* Personality Quiz Styles */
+.quiz-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+.quiz-section {
+  margin-bottom: 2rem;
+}
+.quiz-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.start-button,
+.quiz-option,
+.retry-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  color: #7a4c00;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.start-button:hover,
+.quiz-option:hover,
+.retry-button:hover {
+  background: linear-gradient(90deg, #ffa751 0%, #ffe259 100%);
+  transform: scale(1.05);
+}
+.quiz-option {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  background: #f7faff;
+  color: #333;
+  text-align: left;
+}
+.quiz-option:hover {
+  background: #eaf2ff;
+}
+.question {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.personality-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.recommendations {
+  margin-top: 2rem;
+}
+.recommendations ul {
+  list-style: none;
+  padding: 0;
+}
+.recommendations li {
+  margin-bottom: 1rem;
+}
+.recommendations a {
+  display: block;
+  padding: 1rem;
+  background: #f7faff;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.recommendations a:hover {
+  background: #eaf2ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+  header {
+    padding: 1rem;
+  }
+  .header-center {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .nav-links {
+    order: 2; /* Change order to show links after basket */
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .basket-link {
+    order: 1; /* Show basket before nav links */
+  }
+  .logo-img {
+    height: 120px;
+    margin-right: 0;
+  }
+  .basket-img {
+    height: 120px;
+  }
+  .basket-text,
+  .products-text {
+    display: none; /* Hide text on small screens */
+  }
+  .products-title {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .emoji-list {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .emoji-box {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+  }
+  .content-box {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+  .basket-indicator {
+    bottom: 1rem;
+    right: 1rem;
+    min-width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1rem;
+  }
+  .bundles-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .bundle-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .quiz-container {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+  .quiz-promo h2,
+  .bundles-promo h2 {
+    font-size: 1.5rem;
+  }
+  .quiz-promo p,
+  .bundles-promo p {
+    font-size: 1rem;
+  }
+}
