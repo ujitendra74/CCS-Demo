@@ -2,6 +2,8 @@ const PRODUCTS = {
   apple: { name: "Apple", emoji: "🍏" },
   banana: { name: "Banana", emoji: "🍌" },
   lemon: { name: "Lemon", emoji: "🍋" },
+  orange: { name: "Orange", emoji: "🍊" },
+  strawberry: { name: "Strawberry", emoji: "🍓" }
 };
 
 const BUNDLES = {
@@ -56,11 +58,14 @@ function renderBasket() {
   const basket = getBasket();
   const basketList = document.getElementById("basketList");
   const cartButtonsRow = document.querySelector(".cart-buttons-row");
+  const basketTotalDiv = document.getElementById("basketTotal");
   if (!basketList) return;
   basketList.innerHTML = "";
+  let total = 0;
   if (basket.length === 0) {
     basketList.innerHTML = "<li>No products in basket.</li>";
     if (cartButtonsRow) cartButtonsRow.style.display = "none";
+    if (basketTotalDiv) basketTotalDiv.textContent = "Total: €0.00";
     return;
   }
   basket.forEach((item) => {
@@ -71,6 +76,11 @@ function renderBasket() {
         const li = document.createElement("li");
         li.innerHTML = `<span class='basket-emoji'>${bundle.emoji}</span> <span>${bundle.name} Bundle</span>`;
         basketList.appendChild(li);
+        bundle.products.forEach(prod => {
+          if (window.FRUIT_FACTS && window.FRUIT_FACTS[prod]) {
+            total += window.FRUIT_FACTS[prod].price;
+          }
+        });
       }
     } else {
       const product = PRODUCTS[item];
@@ -78,10 +88,14 @@ function renderBasket() {
         const li = document.createElement("li");
         li.innerHTML = `<span class='basket-emoji'>${product.emoji}</span> <span>${product.name}</span>`;
         basketList.appendChild(li);
+        if (window.FRUIT_FACTS && window.FRUIT_FACTS[item]) {
+          total += window.FRUIT_FACTS[item].price;
+        }
       }
     }
   });
   if (cartButtonsRow) cartButtonsRow.style.display = "flex";
+  if (basketTotalDiv) basketTotalDiv.textContent = `Total: €${total.toFixed(2)}`;
 }
 
 function renderBasketIndicator() {

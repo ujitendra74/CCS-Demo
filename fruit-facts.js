@@ -1,5 +1,6 @@
 const FRUIT_FACTS = {
   apple: {
+    price: 0.80,
     nutrition: {
       calories: "95 kcal",
       fiber: "4.5g",
@@ -18,6 +19,7 @@ const FRUIT_FACTS = {
     season: "Best from September to November"
   },
   banana: {
+    price: 0.60,
     nutrition: {
       calories: "105 kcal",
       fiber: "3.1g",
@@ -36,6 +38,7 @@ const FRUIT_FACTS = {
     season: "Available year-round"
   },
   lemon: {
+    price: 0.50,
     nutrition: {
       calories: "20 kcal",
       fiber: "2.4g",
@@ -54,6 +57,7 @@ const FRUIT_FACTS = {
     season: "Peak season from November to March"
   },
   orange: {
+    price: 0.90,
     nutrition: {
       calories: "62 kcal",
       fiber: "3.1g",
@@ -72,6 +76,7 @@ const FRUIT_FACTS = {
     season: "Best from December to April"
   },
   strawberry: {
+    price: 1.20,
     nutrition: {
       calories: "49 kcal",
       fiber: "3g",
