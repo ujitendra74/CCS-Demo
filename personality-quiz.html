@@ -11,21 +11,39 @@
     <meta property="og:image" content="img/fruit-shop-logo.webp">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="img/fruit-shop-logo.webp" alt="Fruit Shop Logo" width="50" height="50">
-                Fruit Shop
-            </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="bundles.html">Bundles</a>
-                <a href="basket.html">
-                    <img src="img/basket-icon.png" alt="Basket" width="20" height="20">
-                    Basket
-                </a>
-            </div>
+    <header role="banner">
+      <div class="header-center">
+        <a href="index.html" class="logo" aria-label="Go to homepage">
+          <img
+            src="img/fruit-shop-logo.webp"
+            class="logo-img"
+            alt="Fruit Shop Logo"
+          />
+          <span class="products-text" style="text-align: center">
+            View Products
+          </span>
+        </a>
+        <nav role="navigation" aria-label="Main navigation">
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="bundles.html">Bundles</a>
+            <a href="personality-quiz.html" class="quiz-link">🌟 Fruit Quiz</a>
+          </div>
+          <a
+            href="basket.html"
+            class="basket-link"
+            aria-label="View shopping basket"
+            style="position: relative"
+          >
+            <img
+              src="img/basket-icon.png"
+              class="basket-img"
+              alt="Shopping basket icon"
+            />
+            <span class="basket-text">View shopping basket</span>
+          </a>
         </nav>
+      </div>
     </header>
 
     <main class="quiz-container">
