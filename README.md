@@ -7,14 +7,18 @@
 
 - Create accounts for:
   - [GitHub](https://github.com)
+  - [Github CLI](https://cli.github.com/)
   - [n8n](https://n8n.io/)
   - [Airtop](https://www.airtop.ai/)
   - [Vercel](https://vercel.com/)
 
 - Fork repository & Add SCRUM issue:
-  - https://github.com/tlolkema/ai-demo-webshop
+  - https://github.com/grvermeulen/CCS-demo
   - Untick "main branch only"
   - Enable the "Issues" tab for forked repositories (Setting > General > Features > Issues)
+  - Github - Setting - Developer settings - Personal Access Tokens - Fine Grained Token - Create a new token and select the correct repository. - SAVE YOUR TOKEN SOMEWHERE SAFE - --> If you create a Private repo you need to set all permissions manually 1 by 1 at the token section.
+  - Install Github CLI (https://github.com/cli/cli#installation) - run "gh auth login" - Select GitHub.com - Choose HTTPS - When prompted, select “Paste your authentication token:” - copy paste your created token by right mouse clicking (ctrl + v doesn't work)
+  - set default repo (if you have multiple on Github) "gh repo set-default grvermeulen/CCS-Demo"
   - Write your own scrum issue or copy an example from the repository
 
 - [Connect your Vercel account to the GitHub repository](https://vercel.com/docs/git#deploying-a-git-repository)
