@@ -31,7 +31,7 @@
 
 - [Import the workflow from the GitHub repository (within n8n directory) in n8n.](https://docs.n8n.io/courses/level-one/chapter-6/)
   - Create a new workflow.
-  - Use the "Import from File..." option.
+  - Use the "Import from File..." option which is under the ... menu (top right next to version history)
 
 - Edit the n8n pipeline with all your own credentials to connect with GitHub, Airtop and OpenAI.
   - All steps which need it should show an error icon.
