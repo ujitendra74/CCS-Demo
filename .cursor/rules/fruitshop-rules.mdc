@@ -9,4 +9,4 @@ When working on the fruitshop always apply this workingflow:
 2. create a branch for the new development based on the issue
 3. code 
 4. commit and push 
-5. create a pull request 
+5. create a pull request from the branch to the main branch (of the same repo your now on)
