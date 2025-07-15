@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Fruit Bundles - Fruit Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <div class="header-center">
+        <a href="index.html" class="logo" aria-label="Go to homepage">
+          <img src="img/fruit-shop-logo.webp" class="logo-img" alt="Fruit Shop Logo" />
+          <span class="products-text" style="text-align: center">View Products</span>
+        </a>
+        <nav role="navigation" aria-label="Main navigation">
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="bundles.html">Bundles</a>
+            <a href="personality-quiz.html" class="quiz-link">🌟 Fruit Quiz</a>
+            <a href="subscription.html" class="subscription-link">🍎 Subscription</a>
+            <a href="world-bundles.html" class="world-bundles-link">🌏 World Bundles</a>
+          </div>
+          <a href="basket.html" class="basket-link" aria-label="View shopping basket" style="position: relative">
+            <img src="img/basket-icon.png" class="basket-img" alt="Shopping basket icon" />
+            <span class="basket-text">View shopping basket</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" role="main">
+      <div class="content-box">
+        <h1>World Fruit Bundles</h1>
+        <div id="bundlesContainer" class="bundles-container"></div>
+      </div>
+    </main>
+    <script src="shop.js"></script>
+    <script>
+      function createBundleCard(bundle) {
+        const card = document.createElement('div');
+        card.className = 'bundle-card';
+        card.innerHTML = `
+          <h2>${bundle.flag} ${bundle.region}</h2>
+          <div class="bundle-fruits">
+            ${bundle.fruits.map(fruit => `
+              <div class="fruit-item">
+                <img src="${fruit.image}" alt="${fruit.name}" class="fruit-img" />
+                <div>${fruit.name} <span class="fruit-price">($${fruit.price.toFixed(2)})</span></div>
+              </div>
+            `).join('')}
+          </div>
+          <ul class="bundle-facts">
+            ${bundle.facts.map(fact => `<li>${fact}</li>`).join('')}
+          </ul>
+          <button class="add-bundle-btn">Add Bundle to Basket</button>
+        `;
+        card.querySelector('.add-bundle-btn').onclick = function() {
+          bundle.fruits.forEach(fruit => addToBasket(fruit));
+          alert(`Added ${bundle.region} bundle to basket!`);
+        };
+        return card;
+      }
+      
+      const container = document.getElementById('bundlesContainer');
+      worldFruitBundles.forEach(bundle => {
+        container.appendChild(createBundleCard(bundle));
+      });
+    </script>
+  </body>
+</html> 

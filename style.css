@@ -316,38 +316,72 @@ input[type="text"]:focus {
 }
 
 .bundle-card {
-  background: #fff;
-  border-radius: 18px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.bundle-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.bundle-emojis {
-  font-size: 3rem;
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.bundle-desc {
-  color: #666;
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.4;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  margin: 24px 0;
+  padding: 24px;
+  background: #fafcff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .bundle-card h2 {
-  color: #222;
-  margin: 0;
-  font-size: 1.8rem;
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #2a5d34;
+}
+
+.bundle-fruits {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.fruit-item {
+  text-align: center;
+}
+
+.fruit-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f0f0f0;
+  margin-bottom: 4px;
+}
+
+.fruit-price {
+  color: #888;
+  font-size: 0.95em;
+}
+
+.bundle-facts {
+  margin: 12px 0 16px 0;
+  padding-left: 20px;
+  color: #3a3a3a;
+}
+
+.add-bundle-btn {
+  background: #2a5d34;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-bundle-btn:hover {
+  background: #1e4024;
+}
+
+.info-box {
+  background: #e6f7e6;
+  border-left: 4px solid #2a5d34;
+  padding: 12px 18px;
+  margin: 18px 0;
+  border-radius: 6px;
+  color: #2a5d34;
 }
 
 .bundles-promo {

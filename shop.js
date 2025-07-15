@@ -27,6 +27,51 @@ const BUNDLES = {
   }
 };
 
+// --- World Fruit Bundles Data ---
+const worldFruitBundles = [
+  {
+    region: "India",
+    flag: "🇮🇳",
+    fruits: [
+      { name: "Mango", image: "img/mango.png", price: 2.5 },
+      { name: "Guava", image: "img/guava.png", price: 1.5 },
+      { name: "Lychee", image: "img/lychee.png", price: 2.0 },
+      { name: "Banana", image: "img/banana.png", price: 1.0 }
+    ],
+    facts: [
+      "India is the world's largest producer of mangoes, often called the 'King of Fruits.'",
+      "Bananas are grown year-round in India and are a staple in many regions.",
+      "Lychee is a summer fruit native to India's subtropical regions."
+    ]
+  },
+  {
+    region: "South America",
+    flag: "🌎",
+    fruits: [
+      { name: "Papaya", image: "img/papaya.png", price: 2.2 },
+      { name: "Passion Fruit", image: "img/passionfruit.png", price: 2.8 },
+      { name: "Pineapple", image: "img/pineapple.png", price: 2.0 }
+    ],
+    facts: [
+      "South America is home to many exotic fruits, including papaya and passion fruit.",
+      "Pineapples are native to South America and were spread around the world by explorers."
+    ]
+  },
+  {
+    region: "Europe",
+    flag: "🇪🇺",
+    fruits: [
+      { name: "Apple", image: "img/apple.png", price: 1.2 },
+      { name: "Pear", image: "img/pear.png", price: 1.3 },
+      { name: "Plum", image: "img/plum.png", price: 1.7 }
+    ],
+    facts: [
+      "Europe is known for its apple and pear orchards.",
+      "Plums are a traditional fruit in many European desserts."
+    ]
+  }
+];
+
 function getBasket() {
   const basket = localStorage.getItem("basket");
   return basket ? JSON.parse(basket) : [];
