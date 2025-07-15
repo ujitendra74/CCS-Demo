@@ -12,10 +12,11 @@
   - [Vercel](https://vercel.com/)
 
 - Fork repository & Add SCRUM issue:
-  - https://github.com/tlolkema/ai-demo-webshop
+  - https://github.com/grvermeulen/CCS-Demo
   - Untick "main branch only"
   - Enable the "Issues" tab for forked repositories (Setting > General > Features > Issues)
   - Write your own scrum issue or copy an example from the repository
+  - If you really want to go all out agentic; install github cli: winget install --id GitHub.cli (https://github.com/cli/cli/releases)
 
 - [Connect your Vercel account to the GitHub repository](https://vercel.com/docs/git#deploying-a-git-repository)
   - Within Vercel, top right click "Add New..."
