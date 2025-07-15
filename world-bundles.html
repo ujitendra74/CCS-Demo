@@ -44,7 +44,7 @@
           <div class="bundle-fruits">
             ${bundle.fruits.map(fruit => `
               <div class="fruit-item">
-                <img src="${fruit.image}" alt="${fruit.name}" class="fruit-img" />
+                <div style="font-size: 3rem" role="img" aria-label="${fruit.name}">${fruit.emoji}</div>
                 <div>${fruit.name} <span class="fruit-price">($${fruit.price.toFixed(2)})</span></div>
               </div>
             `).join('')}
