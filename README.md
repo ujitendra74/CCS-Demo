@@ -37,7 +37,7 @@
   - All steps which need it should show an error icon.
   - For all GitHub nodes change the repository owner to yourself.
  
-- Change the node from "Start browser" to your workflow.
+- Change the node from "Start browser" to your workflow --> the name in the workflow list in the parameters must match the name of your n8n workflow
 
 - Activate your workflow within n8n.
   - Switch the toggle at the top right to "Active"
