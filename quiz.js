@@ -110,6 +110,8 @@ let personalityScores = {
 };
 let impactScore = 0;
 
+let quizStartEl, quizQuestionsEl, quizResultEl;
+
 function getCurrentSeasonTip(fruit) {
     const season = getCurrentSeason();
     const tips = {
@@ -144,17 +146,23 @@ function getCurrentSeason() {
 }
 
 function startQuiz() {
+    if (!quizStartEl) {
+        quizStartEl = document.getElementById('quiz-start');
+        quizQuestionsEl = document.getElementById('quiz-questions');
+        quizResultEl = document.getElementById('quiz-result');
+    }
+    
     currentQuestion = 0;
     personalityScores = { banana: 0, apple: 0, lemon: 0 };
     impactScore = 0;
     displayQuestion();
-    document.getElementById('quiz-start').style.display = 'none';
-    document.getElementById('quiz-questions').style.display = 'block';
-    document.getElementById('quiz-result').style.display = 'none';
+    quizStartEl.style.display = 'none';
+    quizQuestionsEl.style.display = 'block';
+    quizResultEl.style.display = 'none';
 }
 
 function displayQuestion() {
-    const questionContainer = document.getElementById('quiz-questions');
+    const questionContainer = quizQuestionsEl;
     const question = quizQuestions[currentQuestion];
     
     questionContainer.innerHTML = `
@@ -219,9 +227,9 @@ function updateGlobalStats() {
 function showResult() {
     const result = Object.entries(personalityScores).reduce((a, b) => a[1] > b[1] ? a : b)[0];
     const personality = fruitPersonalities[result];
-    const resultContainer = document.getElementById('quiz-result');
+    const resultContainer = quizResultEl;
     
-    document.getElementById('quiz-questions').style.display = 'none';
+    quizQuestionsEl.style.display = 'none';
     resultContainer.style.display = 'block';
     
     resultContainer.innerHTML = `
@@ -314,4 +322,4 @@ function shareResult(platform) {
     };
     
     window.open(shareUrls[platform], '_blank');
-} 
+}  
