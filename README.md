@@ -7,19 +7,16 @@
 
 - Create accounts for:
   - [GitHub](https://github.com)
-  - [Github CLI](https://cli.github.com/)
   - [n8n](https://n8n.io/)
   - [Airtop](https://www.airtop.ai/)
   - [Vercel](https://vercel.com/)
 
 - Fork repository & Add SCRUM issue:
-  - https://github.com/grvermeulen/CCS-demo
+  - https://github.com/grvermeulen/CCS-Demo
   - Untick "main branch only"
   - Enable the "Issues" tab for forked repositories (Setting > General > Features > Issues)
-  - Github - Setting - Developer settings - Personal Access Tokens - Fine Grained Token - Create a new token and select the correct repository. - SAVE YOUR TOKEN SOMEWHERE SAFE - --> If you create a Private repo you need to set all permissions manually 1 by 1 at the token section.
-  - Install Github CLI (https://github.com/cli/cli#installation) - run "gh auth login" - Select GitHub.com - Choose HTTPS - When prompted, select “Paste your authentication token:” - copy paste your created token by right mouse clicking (ctrl + v doesn't work)
-  - set default repo (if you have multiple on Github) "gh repo set-default grvermeulen/CCS-Demo"
   - Write your own scrum issue or copy an example from the repository
+  - If you really want to go all out agentic; install github cli: winget install --id GitHub.cli (https://github.com/cli/cli/releases)
 
 - [Connect your Vercel account to the GitHub repository](https://vercel.com/docs/git#deploying-a-git-repository)
   - Within Vercel, top right click "Add New..."
@@ -35,13 +32,13 @@
 
 - [Import the workflow from the GitHub repository (within n8n directory) in n8n.](https://docs.n8n.io/courses/level-one/chapter-6/)
   - Create a new workflow.
-  - Use the "Import from File..." option.
+  - Use the "Import from File..." option which is under the ... menu (top right next to version history)
 
 - Edit the n8n pipeline with all your own credentials to connect with GitHub, Airtop and OpenAI.
   - All steps which need it should show an error icon.
   - For all GitHub nodes change the repository owner to yourself.
  
-- Change the node from "Start browser" to your workflow.
+- Change the node from "Start browser" to your workflow --> the name in the workflow list in the parameters must match the name of your n8n workflow
 
 - Activate your workflow within n8n.
   - Switch the toggle at the top right to "Active"
