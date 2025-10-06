@@ -34,9 +34,18 @@
   - Create a new workflow.
   - Use the "Import from File..." option which is under the ... menu (top right next to version history)
 
-- Edit the n8n pipeline with all your own credentials to connect with GitHub, Airtop and OpenAI.
-  - All steps which need it should show an error icon.
-  - For all GitHub nodes change the repository owner to yourself.
+- Local Docker setup with credential overwrites:
+  - Copy `.env.example` to `.env` and fill `OPENAI_API_KEY`, `AIRTOP_API_KEY`, `GITHUB_USERNAME`, `GITHUB_TOKEN`.
+  - Copy `credentials-overwrites.example.json` to `credentials-overwrites.json` (optional; the file references the `.env` vars).
+  - Start: `docker compose up -d`
+  - Open `http://localhost:5678`.
+  - Docs reference: [n8n credentials environment variables](https://docs.n8n.io/hosting/configuration/environment-variables/credentials/)
+
+- After import, ensure credentials names match:
+  - `GitHub account 3` (type `githubApi`) uses your PAT from env.
+  - `OpenAi account` (type `openAiApi`) uses your OpenAI key.
+  - `Airtop account` (type `airtopApi`) uses your Airtop key.
+  - Note: Nodes using `githubOAuth2Api` require OAuth setup in n8n. If needed, switch those nodes to use `githubApi` with PAT.
  
 - Change the node from "Start browser" to your workflow --> the name in the workflow list in the parameters must match the name of your n8n workflow
 
