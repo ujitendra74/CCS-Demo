@@ -41,11 +41,7 @@
     {
       "parameters": {
         "authentication": "oAuth2",
-        "owner": {
-          "__rl": true,
-          "value": "grvermeulen",
-          "mode": "name"
-        },
+        "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
           "__rl": true,
           "value": "CCS-demo",
@@ -124,11 +120,7 @@
         "descriptionType": "manual",
         "toolDescription": "Get mentioned related Scrum issue from commit title",
         "operation": "get",
-        "owner": {
-          "__rl": true,
-          "value": "grvermeulen",
-          "mode": "name"
-        },
+        "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
           "__rl": true,
           "value": "CCS-demo",
@@ -303,11 +295,7 @@
       "parameters": {
         "authentication": "oAuth2",
         "resource": "review",
-        "owner": {
-          "__rl": true,
-          "value": "grvermeulen",
-          "mode": "name"
-        },
+        "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
           "__rl": true,
           "value": "CCS-demo",
@@ -338,11 +326,7 @@
       "parameters": {
         "authentication": "oAuth2",
         "resource": "review",
-        "owner": {
-          "__rl": true,
-          "value": "grvermeulen",
-          "mode": "name"
-        },
+        "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
           "__rl": true,
           "value": "CCS-Demo",
@@ -685,11 +669,7 @@
       "parameters": {
         "authentication": "oAuth2",
         "resource": "review",
-        "owner": {
-          "__rl": true,
-          "value": "grvermeulen",
-          "mode": "name"
-        },
+        "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
           "__rl": true,
           "value": "CCS-Demo",
