@@ -1,0 +1,20 @@
+# rename this file to .env
+
+#your github user
+GITHUB_USERNAME=
+
+#your github access token (create a classic token, see readme)
+GITHUB_TOKEN=
+
+#These will be provided by th workshop hosts. --> or provide your own if you have them. 
+OPENAI_API_KEY=
+AIRTOP_API_KEY=
+
+# Allow webhooks from outside to connect to your local n8n instance
+N8N_TUNNEL=true
+
+#Used to encrypt/decrypt credentials and other sensitive data stored by n8n. It must be set once and kept constant for an instance, changing it later will make previously saved credentials unreadable. Keep it secret and backed up.
+N8N_ENCRYPTION_KEY=
+
+# Controls whether environment variables can be read from expressions/Code nodes (e.g., {{$env.MY_VAR}}).
+N8N_BLOCK_ENV_ACCESS_IN_NODE=false
