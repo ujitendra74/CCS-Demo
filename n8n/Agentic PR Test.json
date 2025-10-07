@@ -40,7 +40,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "accessToken",
         "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
           "__rl": true,
@@ -62,9 +62,8 @@
       "name": "Github Trigger",
       "webhookId": "f02079a7-2d87-4c21-b85d-3af539244853",
       "credentials": {
-        "githubOAuth2Api": {
-          "id": "6F53O8Zf3hJZijLr",
-          "name": "GitHub account"
+        "githubApi": {
+          "name": "GitHub account 3"
         }
       }
     },
@@ -293,7 +292,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "accessToken",
         "resource": "review",
         "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
@@ -316,15 +315,14 @@
       "name": "GitHub Comment",
       "webhookId": "37304c5a-87ff-4394-a0f6-3f7b130e46b4",
       "credentials": {
-        "githubOAuth2Api": {
-          "id": "6F53O8Zf3hJZijLr",
-          "name": "GitHub account"
+        "githubApi": {
+          "name": "GitHub account 3"
         }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "accessToken",
         "resource": "review",
         "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
@@ -349,9 +347,8 @@
       "name": "GitHub Testcases Comment",
       "webhookId": "99555e15-f7d4-4976-801e-d7e0d8a3dce3",
       "credentials": {
-        "githubOAuth2Api": {
-          "id": "6F53O8Zf3hJZijLr",
-          "name": "GitHub account"
+        "githubApi": {
+          "name": "GitHub account 3"
         }
       }
     },
@@ -667,7 +664,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "accessToken",
         "resource": "review",
         "owner": "={{ $env.GITHUB_USERNAME }}",
         "repository": {
@@ -692,9 +689,8 @@
       "name": "GitHub Results Comment",
       "webhookId": "99555e15-f7d4-4976-801e-d7e0d8a3dce3",
       "credentials": {
-        "githubOAuth2Api": {
-          "id": "6F53O8Zf3hJZijLr",
-          "name": "GitHub account"
+        "githubApi": {
+          "name": "GitHub account 3"
         }
       }
     },
