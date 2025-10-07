@@ -10,6 +10,7 @@
   - [n8n](https://n8n.io/)
   - [Airtop](https://www.airtop.ai/)
   - [Vercel](https://vercel.com/)
+  - [Docker](https://docs.docker.com/desktop/setup/install/windows-install/ or https://docs.docker.com/desktop/setup/install/mac-install/) 
 
 - Fork repository & Add SCRUM issue:
   - https://github.com/grvermeulen/CCS-Demo
@@ -30,27 +31,30 @@
   - Go to "Deployment Protection"
   - Switch off protection for the demo repository.
 
-- [Import the workflow from the GitHub repository (within n8n directory) in n8n.](https://docs.n8n.io/courses/level-one/chapter-6/)
-  - Create a new workflow.
-  - Use the "Import from File..." option which is under the ... menu (top right next to version history)
-
 - Local Docker setup with credential overwrites:
   - Copy `.env.example` to `.env` and fill `OPENAI_API_KEY`, `AIRTOP_API_KEY`, `GITHUB_USERNAME`, `GITHUB_TOKEN`.
   - Copy `credentials-overwrites.example.json` to `credentials-overwrites.json` (optional; the file references the `.env` vars).
   - Start: `docker compose up -d`
   - Open `http://localhost:5678`.
   - Docs reference: [n8n credentials environment variables](https://docs.n8n.io/hosting/configuration/environment-variables/credentials/)
+  - Create the encryption key and place in in the .env file: docker exec n8n-local sh -lc "env | grep -E '^N8N_ENCRYPTION_KEY=' || true"
+
+  - [Import the workflow from the GitHub repository (within n8n directory) in n8n.](https://docs.n8n.io/courses/level-one/chapter-6/)
+  - Create a new workflow.
+  - Use the "Import from File..." option which is under the ... menu (top right next to version history)
 
 - After import, ensure credentials names match:
-  - `GitHub account 3` (type `githubApi`) uses your PAT from env.
-  - `OpenAi account` (type `openAiApi`) uses your OpenAI key.
-  - `Airtop account` (type `airtopApi`) uses your Airtop key.
-  - Note: Nodes using `githubOAuth2Api` require OAuth setup in n8n. If needed, switch those nodes to use `githubApi` with PAT.
+  - Open each of the nodes with red triangle and directly dismiss it again. The red triangle will disappear. 
  
+ // If you have not changed the workflow name skip this step.  
 - Change the node from "Start browser" to your workflow --> the name in the workflow list in the parameters must match the name of your n8n workflow
 
 - Activate your workflow within n8n.
   - Switch the toggle at the top right to "Active"
+- In Cursor terminal run: docker compose up -d --force-recreate
+- Refresh n8n browser 
+- Switch the toggle at the top right to deactived the workflow and then re-activate. This updates the Github Webhook url to the n8n webhook url. 
+- Click the big red button "Activate workflow" 
 
 # Workshop
 

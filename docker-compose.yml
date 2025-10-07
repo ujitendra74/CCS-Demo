@@ -3,6 +3,7 @@ services:
   n8n:
     image: n8nio/n8n:latest
     container_name: n8n-local
+    command: ["start", "--tunnel"]
     ports:
       - "5678:5678"
     env_file:
@@ -12,10 +13,12 @@ services:
       - N8N_DIAGNOSTICS_ENABLED=false
       - N8N_PERSONALIZATION_ENABLED=false
       - N8N_SECURE_COOKIE=false
-      - N8N_EDITOR_BASE_URL=http://localhost:5678
-      - N8N_HOST=localhost
       - N8N_PORT=5678
       - GENERIC_TIMEZONE=Europe/Brussels
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_TUNNEL=true
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
       # Use credential overwrites per n8n docs
       # See: https://docs.n8n.io/hosting/configuration/environment-variables/credentials/
       - CREDENTIALS_OVERWRITE_DATA_FILE=/home/node/.n8n/credentials-overwrites.json

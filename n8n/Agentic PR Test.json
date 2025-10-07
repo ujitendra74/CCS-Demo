@@ -40,8 +40,12 @@
     },
     {
       "parameters": {
-        "authentication": "accessToken",
-        "owner": "={{ $env.GITHUB_USERNAME }}",
+        "authentication": "oAuth2",
+        "owner": {
+          "__rl": true,
+          "value": "grvermeulen",
+          "mode": "name"
+        },
         "repository": {
           "__rl": true,
           "value": "CCS-demo",
@@ -62,8 +66,9 @@
       "name": "Github Trigger",
       "webhookId": "f02079a7-2d87-4c21-b85d-3af539244853",
       "credentials": {
-        "githubApi": {
-          "name": "GitHub account 3"
+        "githubOAuth2Api": {
+          "id": "6F53O8Zf3hJZijLr",
+          "name": "GitHub account"
         }
       }
     },
@@ -119,7 +124,11 @@
         "descriptionType": "manual",
         "toolDescription": "Get mentioned related Scrum issue from commit title",
         "operation": "get",
-        "owner": "={{ $env.GITHUB_USERNAME }}",
+        "owner": {
+          "__rl": true,
+          "value": "grvermeulen",
+          "mode": "name"
+        },
         "repository": {
           "__rl": true,
           "value": "CCS-demo",
@@ -269,9 +278,9 @@
       "parameters": {
         "model": {
           "__rl": true,
-          "value": "gpt-4.1",
+          "value": "gpt-5-mini",
           "mode": "list",
-          "cachedResultName": "gpt-4.1"
+          "cachedResultName": "gpt-5-mini"
         },
         "options": {}
       },
@@ -292,9 +301,13 @@
     },
     {
       "parameters": {
-        "authentication": "accessToken",
+        "authentication": "oAuth2",
         "resource": "review",
-        "owner": "={{ $env.GITHUB_USERNAME }}",
+        "owner": {
+          "__rl": true,
+          "value": "grvermeulen",
+          "mode": "name"
+        },
         "repository": {
           "__rl": true,
           "value": "CCS-demo",
@@ -315,16 +328,21 @@
       "name": "GitHub Comment",
       "webhookId": "37304c5a-87ff-4394-a0f6-3f7b130e46b4",
       "credentials": {
-        "githubApi": {
-          "name": "GitHub account 3"
+        "githubOAuth2Api": {
+          "id": "6F53O8Zf3hJZijLr",
+          "name": "GitHub account"
         }
       }
     },
     {
       "parameters": {
-        "authentication": "accessToken",
+        "authentication": "oAuth2",
         "resource": "review",
-        "owner": "={{ $env.GITHUB_USERNAME }}",
+        "owner": {
+          "__rl": true,
+          "value": "grvermeulen",
+          "mode": "name"
+        },
         "repository": {
           "__rl": true,
           "value": "CCS-Demo",
@@ -347,8 +365,9 @@
       "name": "GitHub Testcases Comment",
       "webhookId": "99555e15-f7d4-4976-801e-d7e0d8a3dce3",
       "credentials": {
-        "githubApi": {
-          "name": "GitHub account 3"
+        "githubOAuth2Api": {
+          "id": "6F53O8Zf3hJZijLr",
+          "name": "GitHub account"
         }
       }
     },
@@ -664,9 +683,13 @@
     },
     {
       "parameters": {
-        "authentication": "accessToken",
+        "authentication": "oAuth2",
         "resource": "review",
-        "owner": "={{ $env.GITHUB_USERNAME }}",
+        "owner": {
+          "__rl": true,
+          "value": "grvermeulen",
+          "mode": "name"
+        },
         "repository": {
           "__rl": true,
           "value": "CCS-Demo",
@@ -689,8 +712,9 @@
       "name": "GitHub Results Comment",
       "webhookId": "99555e15-f7d4-4976-801e-d7e0d8a3dce3",
       "credentials": {
-        "githubApi": {
-          "name": "GitHub account 3"
+        "githubOAuth2Api": {
+          "id": "6F53O8Zf3hJZijLr",
+          "name": "GitHub account"
         }
       }
     },
@@ -698,9 +722,9 @@
       "parameters": {
         "model": {
           "__rl": true,
-          "value": "gpt-4.1",
+          "value": "gpt-5-mini",
           "mode": "list",
-          "cachedResultName": "gpt-4.1"
+          "cachedResultName": "gpt-5-mini"
         },
         "options": {}
       },
