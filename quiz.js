@@ -6,7 +6,9 @@ const globalStats = {
     personalityDistribution: {
         banana: 0,
         apple: 0,
-        lemon: 0
+        lemon: 0,
+        mango: 0,
+        watermelon: 0
     },
     impactStats: {
         treesPlanted: 0,
@@ -21,7 +23,9 @@ const quizQuestions = [
         options: [
             { text: "With lots of energy", personality: "banana", impact: "energyConscious" },
             { text: "Taking it slow and steady", personality: "apple", impact: "localProduce" },
-            { text: "With a zesty attitude", personality: "lemon", impact: "waterSaving" }
+            { text: "With a zesty attitude", personality: "lemon", impact: "waterSaving" },
+            { text: "Sweet tropical vibes", personality: "mango", impact: "biodiversity" },
+            { text: "Light and refreshing", personality: "watermelon", impact: "hydration" }
         ],
         fact: "Did you know? The way you start your day can affect your food choices and environmental impact!"
     },
@@ -30,7 +34,9 @@ const quizQuestions = [
         options: [
             { text: "Sports and outdoor activities", personality: "banana", impact: "activeLifestyle" },
             { text: "Reading a book in the garden", personality: "apple", impact: "sustainableLiving" },
-            { text: "Hosting a party", personality: "lemon", impact: "socialImpact" }
+            { text: "Hosting a party", personality: "lemon", impact: "socialImpact" },
+            { text: "Tropical beach day", personality: "mango", impact: "wildlifeSupport" },
+            { text: "Poolside chill", personality: "watermelon", impact: "waterEfficiency" }
         ],
         fact: "Fun fact: Outdoor activities can reduce your carbon footprint compared to indoor entertainment!"
     },
@@ -39,7 +45,9 @@ const quizQuestions = [
         options: [
             { text: "Energetic and fun", personality: "banana", impact: "communityEngagement" },
             { text: "Reliable and wise", personality: "apple", impact: "mentorship" },
-            { text: "Bold and refreshing", personality: "lemon", impact: "innovation" }
+            { text: "Bold and refreshing", personality: "lemon", impact: "innovation" },
+            { text: "Warm and vibrant", personality: "mango", impact: "reforestation" },
+            { text: "Cool and balanced", personality: "watermelon", impact: "smartIrrigation" }
         ],
         fact: "Did you know? Your personality type can influence your environmental awareness!"
     },
@@ -48,7 +56,9 @@ const quizQuestions = [
         options: [
             { text: "Taking immediate action", personality: "banana", impact: "directAction" },
             { text: "Planning sustainable solutions", personality: "apple", impact: "longTermPlanning" },
-            { text: "Inspiring others to change", personality: "lemon", impact: "socialInfluence" }
+            { text: "Inspiring others to change", personality: "lemon", impact: "socialInfluence" },
+            { text: "Nurturing communities", personality: "mango", impact: "communityForestry" },
+            { text: "Optimizing resources", personality: "watermelon", impact: "resourceOptimization" }
         ],
         fact: "Amazing fact: Individual actions, when multiplied, create significant environmental impact!"
     }
@@ -99,6 +109,36 @@ const fruitPersonalities = {
             action: "Using whole lemons reduces food waste and maximizes environmental benefits."
         },
         seasonalTip: getCurrentSeasonTip('lemon')
+    },
+    mango: {
+        name: "Radiant Mango",
+        description: "You're warm, vibrant, and uplifting. Like a mango, you bring sweetness and sunshine wherever you go.",
+        recommendations: ["Tropical Party Bundle", "Fruit Feast Bundle"],
+        healthBenefits: [
+            "Rich in vitamins A and C",
+            "Supports eye and skin health",
+            "Packed with antioxidants"
+        ],
+        environmentalImpact: {
+            positive: "Mango orchards support biodiversity and can aid reforestation efforts!",
+            action: "Choose fair-trade mangoes to support sustainable communities."
+        },
+        seasonalTip: "Best enjoyed in summer — try it chilled!"
+    },
+    watermelon: {
+        name: "Cool Watermelon",
+        description: "Calm, refreshing, and balanced. Like a watermelon, you're a go-to for hydration and good vibes.",
+        recommendations: ["Citrus Lovers Bundle", "Fruit Feast Bundle"],
+        healthBenefits: [
+            "Excellent hydration",
+            "Contains lycopene for heart health",
+            "Naturally low in calories"
+        ],
+        environmentalImpact: {
+            positive: "Modern drip irrigation makes watermelon cultivation highly water-efficient!",
+            action: "Support farms using smart irrigation to conserve water."
+        },
+        seasonalTip: "Peak summer treat — perfect for picnics!"
     }
 };
 
@@ -106,7 +146,9 @@ let currentQuestion = 0;
 let personalityScores = {
     banana: 0,
     apple: 0,
-    lemon: 0
+    lemon: 0,
+    mango: 0,
+    watermelon: 0
 };
 let impactScore = 0;
 
@@ -145,7 +187,7 @@ function getCurrentSeason() {
 
 function startQuiz() {
     currentQuestion = 0;
-    personalityScores = { banana: 0, apple: 0, lemon: 0 };
+    personalityScores = { banana: 0, apple: 0, lemon: 0, mango: 0, watermelon: 0 };
     impactScore = 0;
     displayQuestion();
     document.getElementById('quiz-start').style.display = 'none';
@@ -269,6 +311,10 @@ function showResult() {
                     <li><a href="bundles.html">${bundle}</a></li>
                 `).join('')}
             </ul>
+        </div>
+
+        <div class="cta-section" style="text-align:center; margin: 1.5rem 0;">
+            <a href="product-${result}.html" class="start-button">View Your Recommended Fruit</a>
         </div>
 
         <div class="global-impact">
