@@ -52,6 +52,42 @@ const FRUIT_FACTS = {
       "Supports skin health"
     ],
     season: "Peak season from November to March"
+  },
+  mango: {
+    nutrition: {
+      calories: "99 kcal",
+      fiber: "2.6g",
+      vitamin_c: "67% DV"
+    },
+    facts: [
+      "Mango is known as the 'king of fruits' in many countries",
+      "Over 500 mango varieties exist worldwide",
+      "Mango trees can live for more than 100 years"
+    ],
+    benefits: [
+      "Rich in vitamins A and C",
+      "Supports eye and skin health",
+      "Contains immune-boosting antioxidants"
+    ],
+    season: "Best from May to September"
+  },
+  watermelon: {
+    nutrition: {
+      calories: "85 kcal (per 2 cups)",
+      fiber: "1.1g",
+      vitamin_c: "20% DV"
+    },
+    facts: [
+      "Watermelon is 90% water—super hydrating!",
+      "Both the rind and seeds are edible",
+      "Originated in Africa thousands of years ago"
+    ],
+    benefits: [
+      "Excellent hydration",
+      "Contains lycopene for heart health",
+      "Refreshing and low in calories"
+    ],
+    season: "Peak season from May to September"
   }
 };
 
