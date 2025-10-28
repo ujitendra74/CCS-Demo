@@ -29,8 +29,8 @@ const BUNDLES = {
   },
   summer_crazy: {
     name: "Summer Crazy",
-    products: ["mango", "watermelon"],
-    emoji: "🥭🍉"
+    products: ["apple", "banana", "lemon", "mango", "watermelon"],
+    emoji: "🍏🍌🍋🥭🍉"
   }
 };
 
