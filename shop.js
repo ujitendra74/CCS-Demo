@@ -26,6 +26,11 @@ const BUNDLES = {
     name: "Fruit Feast",
     products: ["apple", "banana", "lemon", "mango", "watermelon"],
     emoji: "🍏🍌🍋🥭🍉"
+  },
+  summer_crazy: {
+    name: "Summer Crazy",
+    products: ["mango", "watermelon"],
+    emoji: "🥭🍉"
   }
 };
 
