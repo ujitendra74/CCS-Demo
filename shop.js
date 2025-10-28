@@ -2,6 +2,8 @@ const PRODUCTS = {
   apple: { name: "Apple", emoji: "🍏" },
   banana: { name: "Banana", emoji: "🍌" },
   lemon: { name: "Lemon", emoji: "🍋" },
+  mango: { name: "Mango", emoji: "🥭" },
+  watermelon: { name: "Watermelon", emoji: "🍉" },
 };
 
 const BUNDLES = {
@@ -22,8 +24,8 @@ const BUNDLES = {
   },
   fruit_feast: {
     name: "Fruit Feast",
-    products: ["apple", "banana", "lemon"],
-    emoji: "🍏🍌🍋"
+    products: ["apple", "banana", "lemon", "mango", "watermelon"],
+    emoji: "🍏🍌🍋🥭🍉"
   }
 };
 
